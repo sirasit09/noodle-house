@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noodle House | บะหมี่อร่อย ส่งถึงบ้าน</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#">🍜 Noodle House</a>
+    <nav><a href="#products">สินค้า</a><a href="#about">เกี่ยวกับร้าน</a><a href="#order">สั่งซื้อ</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">อร่อยง่าย ๆ ได้ทุกวัน</p>
+        <h1>เติมความอร่อย<br><span>ในทุกมื้อของคุณ</span></h1>
+        <p>เลือกบะหมี่กึ่งสำเร็จรูปรสโปรด สั่งง่าย ส่งตรงถึงบ้าน</p>
+        <a class="primary-btn" href="#products">เลือกซื้อสินค้า</a>
+      </div>
+      <div class="hero-art" aria-label="ชามบะหมี่">🍜</div>
+    </section>
+
+    <section id="products" class="section">
+      <p class="eyebrow">OUR MENU</p>
+      <h2>สินค้าของเรา</h2>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-art tomyum">🍜</div>
+          <div class="product-info">
+            <span class="sku">SKU001</span>
+            <h3>บะหมี่กึ่งสำเร็จรูปรสต้มยำกุ้ง</h3>
+            <p>รสต้มยำกุ้ง เปรี้ยวเผ็ด หอมเครื่องต้มยำ</p>
+            <div class="product-bottom"><strong>฿15</strong><button onclick="addToCart('SKU001')">เพิ่มลงตะกร้า</button></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-art chicken">🍜</div>
+          <div class="product-info">
+            <span class="sku">SKU002</span>
+            <h3>บะหมี่กึ่งสำเร็จรูปรสไก่ครีม</h3>
+            <p>รสไก่ครีม หอมมัน รสนุ่มละมุน</p>
+            <div class="product-bottom"><strong>฿15</strong><button onclick="addToCart('SKU002')">เพิ่มลงตะกร้า</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="order" class="section order-section">
+      <div>
+        <p class="eyebrow">YOUR CART</p>
+        <h2>ตะกร้าสินค้า</h2>
+        <div id="cart-items" class="cart-items">ยังไม่มีสินค้าในตะกร้า</div>
+        <p class="total">ยอดรวม: <strong id="total">฿0</strong></p>
+      </div>
+      <form id="order-form" class="order-form">
+        <h2>ข้อมูลจัดส่ง</h2>
+        <label>ชื่อผู้รับ<input name="customer" required placeholder="ชื่อ-นามสกุล"></label>
+        <label>เบอร์โทรศัพท์<input name="phone" required type="tel" placeholder="08X-XXX-XXXX"></label>
+        <label>ที่อยู่จัดส่ง<textarea name="address" required rows="3" placeholder="บ้านเลขที่ ถนน แขวง/ตำบล เขต/อำเภอ จังหวัด รหัสไปรษณีย์"></textarea></label>
+        <button class="primary-btn" type="submit">ยืนยันคำสั่งซื้อ</button>
+        <p id="order-message" class="message" role="status"></p>
+      </form>
+    </section>
+
+    <section id="about" class="about">
+      <h2>เกี่ยวกับ Noodle House</h2>
+      <p>ร้านบะหมี่กึ่งสำเร็จรูปที่คัดสรรรสชาติอร่อย สะดวก และเหมาะกับทุกมื้อ</p>
+    </section>
+  </main>
+  <footer>© 2026 Noodle House — อร่อยง่าย ส่งถึงบ้าน</footer>
+  <script src="script.js"></script>
+</body>
+</html>
